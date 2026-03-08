@@ -1,6 +1,9 @@
-# USGS Earthquake Pipeline
+## USGS Earthquake Data Pipeline
 
-This project builds a Python data pipeline that fetches earthquake data from the USGS API, processes the data, and stores results in a SQLite database.
+This project implements a Python data pipeline that retrieves earthquake data
+from the USGS API, processes it into daily magnitude buckets, and stores both
+raw and aggregated results in a SQLite database. The pipeline supports
+pagination, logging, and offline testing using pytest.
 
 ## Features
 - Fetch earthquake events from the USGS API
@@ -48,4 +51,5 @@ pip install -r requirements.txt
 - I added logging in the pipeline so the job is easier to debug if it fails or returns unexpected results.
 
 - I used `pytest` with mocked API responses so tests do not depend on the live USGS API and can run reliably offline.
+
 
