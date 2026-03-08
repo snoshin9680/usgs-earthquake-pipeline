@@ -52,4 +52,11 @@ pip install -r requirements.txt
 
 - I used `pytest` with mocked API responses so tests do not depend on the live USGS API and can run reliably offline.
 
+## Example Output
+INFO:root:Starting earthquake pipeline
+INFO:root:Fetched 10000 events
+INFO:root:Fetched 170 events
+INFO:root:Pipeline finished
+
+
 
