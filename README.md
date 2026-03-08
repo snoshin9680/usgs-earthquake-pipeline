@@ -32,3 +32,20 @@ pytest
 ## Install Requirements
 
 pip install -r requirements.txt
+------------------------------------------------------------------------------------------------------------------
+## Design Decisions
+
+- I separated the project into small modules:
+  - `api.py` handles fetching earthquake data from the USGS API
+  - `transform.py` handles magnitude bucketing and daily aggregation
+  - `database.py` handles SQLite table creation and inserts
+  - `pipeline.py` orchestrates the end-to-end workflow
+
+- I used SQLite because it is lightweight, easy to run locally, and matches the assignment requirement to store both raw and aggregated data.
+
+- I used pagination with `limit` and `offset` so the pipeline can fetch all earthquake records rather than only the first page.
+
+- I added logging in the pipeline so the job is easier to debug if it fails or returns unexpected results.
+
+- I used `pytest` with mocked API responses so tests do not depend on the live USGS API and can run reliably offline.
+
