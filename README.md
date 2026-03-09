@@ -11,7 +11,7 @@ The pipeline supports pagination, logging for observability, and offline unit te
 Clone the repository and run the pipeline in a few steps.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/snoshin9680/usgs-earthquake-pipeline.git
 cd usgs-earthquake-pipeline
 
 # create virtual environment
@@ -252,4 +252,5 @@ This project demonstrates:
 * Modular Python pipeline architecture
 
 ---
+
 
