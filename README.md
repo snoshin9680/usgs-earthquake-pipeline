@@ -3,6 +3,7 @@
 This project implements a Python-based data pipeline that retrieves earthquake event data from the **USGS Earthquake API**, processes the data into daily magnitude buckets, and stores both raw and aggregated results in a **SQLite database**.
 
 The pipeline supports pagination, logging for observability, and offline unit testing using **pytest**.
+Requires Python 3.9+
 
 ---
 
@@ -252,5 +253,6 @@ This project demonstrates:
 * Modular Python pipeline architecture
 
 ---
+
 
 
